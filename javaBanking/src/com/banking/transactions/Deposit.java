@@ -18,22 +18,10 @@ public class Deposit extends Transaction {
 		this.transactionId= transactionId;
 	}
 	
-	@Override
-	public void doTransaction() {
-		if(this.account.getAccountType().equals("Savings Account")) {
-			SavingsAccount account = (SavingsAccount)this.account;
-			account.addFunds(ammount);
-		}else {
-			CurrentAccount curAccount = (CurrentAccount)this.account;
-			curAccount.addFunds(this.ammount);
-		}
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public String toString() {
-		return "Transaction ID:"+this.transactionId+ " Type:"+ this.transactionType+ " Ammount: "+this.ammount+ " dollars";
+		return "Transaction ID:"+this.transactionId+ " Type:"+ this.transactionType+ " Ammount: "+this.ammount+ " dollars \n Realated account: \n"+ this.account.toString();
 	}
 
 }

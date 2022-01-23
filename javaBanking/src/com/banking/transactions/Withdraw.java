@@ -16,20 +16,6 @@ public class Withdraw extends Transaction {
 		this.ammount=ammount;
 	}
 	
-	
-	@Override
-	public void doTransaction() {
-		if(this.account.getAccountType().equals("Savings Account")) {
-			SavingsAccount account = (SavingsAccount)this.account;
-			account.withdraw(ammount);
-		}else {
-			CurrentAccount curAccount = (CurrentAccount)this.account;
-			curAccount.withdraw(this.ammount);
-		}
-		// TODO Auto-generated method stub
-		
-	}
-
 
 	@Override
 	public String toString() {

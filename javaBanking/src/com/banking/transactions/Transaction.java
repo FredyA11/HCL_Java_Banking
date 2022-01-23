@@ -13,5 +13,4 @@ public abstract class Transaction {
 	protected Date transactionDate;
 	
 	public abstract String toString();
-	public abstract void doTransaction();
 }

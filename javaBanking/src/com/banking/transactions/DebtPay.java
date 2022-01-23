@@ -14,15 +14,6 @@ public class DebtPay extends Transaction {
 		this.transactionId=transactionId;
 		this.ammount=ammount;
 	}
-	
-	
-	@Override
-	public void doTransaction() {
-		MortgaugeAccount mortAccount = (MortgaugeAccount)account;
-		mortAccount.payDebt(this.ammount);
-		// TODO Auto-generated method stub
-		
-	}
 
 
 	@Override
